@@ -17,8 +17,6 @@ app.factory('redditFactory', function($http) {
       posts = response.data.data.children;
       console.log(posts);
       return posts;
-    }, function errorCallback(error) {
-        // error message
     });
     return promise;
   };
