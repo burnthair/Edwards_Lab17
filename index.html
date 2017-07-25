@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html ng-app="redditModule" lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Angular Reddit</title>
   <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
 </head>
 
 <body ng-controller='homeCtrl'>
-
-  <div>
-    <a href="#!/home">home</a>
-    <a href="#!/output">output</a>
-  </div>
-
-  <form ng-submit="passSubreddit(subreddit)">
-    <label for="search">enter a subreddit</label>
-    <input id="search" type="text" ng-model="subreddit" placeholder="SEARCH"/>
-    <button type="submit">GO</button>
-  </form>
-
+  <header>
+    <form ng-submit="passSubreddit(subreddit)">
+      <a href="#!/home">home</a>
+      <input id="search" type="text" ng-model="subreddit" placeholder="SEARCH" />
+      <button type="submit">GO</button>
+    </form>
+  </header>
   <ng-view></ng-view>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
@@ -32,4 +29,5 @@
   <script src="js/services/service.js"></script>
   <script src="js/directives/directive.js"></script>
 </body>
+
 </html>
